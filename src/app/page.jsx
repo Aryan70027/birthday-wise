@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "motion/react"
 import FirstScreen from "@/components/FirstScreen"
 import SecondScreen from "@/components/SecondScreen"
@@ -13,6 +13,17 @@ export default function Home() {
   const [currentScreen, setCurrentScreen] = useState(0)
   const [showHugOverlay, setShowHugOverlay] = useState(false)
   const [showRestartOverlay, setShowRestartOverlay] = useState(false)
+
+  const audioRef = useRef(null)
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.5
+      audioRef.current.play().catch(() => {
+        console.log("Autoplay blocked — user interaction required")
+      })
+    }
+  }, [])
 
   const screens = [
     <FirstScreen key="first" onNext={() => handleNext()} />,
@@ -38,6 +49,19 @@ export default function Home() {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-pink-200 via-rose-100 to-purple-200">
+
+      {/* Background Song */}
+      <audio ref={audioRef} src="/music/birthday.mp3" autoPlay loop />
+
+      {/* Note message */}
+      <motion.div
+        initial={{ y: -30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="absolute top-4 w-full text-center z-50 text-sm text-pink-700 font-semibold"
+      >
+        🎵 Song on special demand 💖
+      </motion.div>
 
       <div className="relative z-10 min-h-screen">
         <AnimatePresence mode="wait">
