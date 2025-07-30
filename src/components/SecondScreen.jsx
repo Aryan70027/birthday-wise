@@ -10,35 +10,36 @@ import "swiper/css/effect-cards"
 export default function SecondScreen({ onNext }) {
   const thankYouCards = [
     {
-      text: "Thank you for always being there when I needed you the most",
+      text: "Happy Birthday, Ananya 🎂 — May your day be full of smiles!",
       icon: Heart,
       gradient: "from-pink-400 via-pink-500 to-fuchsia-500",
       glow: "shadow-pink-500/50",
       iconColor: "text-white",
     },
     {
-      text: "Thank you for making my life so much brighter",
+      text: "You deserve all the happiness in the world today 🌸",
       icon: Star,
       gradient: "from-yellow-400 via-amber-500 to-orange-500",
       glow: "shadow-yellow-500/50",
       iconColor: "text-white",
     },
     {
-      text: "Thank you for making me smile every single day",
+      text: "Keep shining bright like the star you are ✨",
       icon: Smile,
       gradient: "from-emerald-400 via-green-500 to-teal-500",
       glow: "shadow-green-500/50",
       iconColor: "text-white",
     },
     {
-      text: "Thank you for bringing sunshine into my world",
+      text: "Wishing you laughter, fun, and unforgettable memories 🥳"
+      ,
       icon: Sun,
       gradient: "from-orange-400 via-yellow-500 to-amber-600",
       glow: "shadow-orange-500/40",
       iconColor: "text-white",
     },
     {
-      text: "Thank you for being the most precious gift",
+      text: "Cheers to another amazing year ahead 🎁",
       icon: Gift,
       gradient: "from-violet-400 via-purple-500 to-indigo-500",
       glow: "shadow-purple-500/50",
@@ -154,7 +155,7 @@ export default function SecondScreen({ onNext }) {
       >
         <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
         <span className="relative z-10 flex gap-2">
-          A Wish Just for You 🌸
+          Keep going 🌸
           <ArrowRight size={20} className="mt-0.5" />
         </span>
       </motion.button>
