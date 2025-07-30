@@ -49,10 +49,10 @@ export default function RestartOverlay({ show, onRestart }) {
               transition={{ delay: 0.8, duration: 1.5 }}
               className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight"
             >
-              Thank you for being
+              Once again, many many returns of the day 🎂
               <br />
               <span className="bg-gradient-to-r from-pink-300 via-fuchsia-300 to-purple-300 bg-clip-text text-transparent">
-                my favorite person!
+                Wishing you birthday in coder style 🎉
               </span>
             </motion.h2>
 
@@ -82,8 +82,7 @@ export default function RestartOverlay({ show, onRestart }) {
               <div className="absolute inset-0 bg-gradient-to-r from-pink-200 via-purple-200 to-pink-200 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <span className="relative z-10 flex items-center gap-3">
                 Start Again
-                <motion.span
-                >
+                <motion.span>
                   <RotateCw size={24} />
                 </motion.span>
                 <motion.span
