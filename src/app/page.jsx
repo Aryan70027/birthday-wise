@@ -13,6 +13,7 @@ export default function Home() {
   const [currentScreen, setCurrentScreen] = useState(0)
   const [showHugOverlay, setShowHugOverlay] = useState(false)
   const [showRestartOverlay, setShowRestartOverlay] = useState(false)
+  const [showPlayButton, setShowPlayButton] = useState(false)
 
   const audioRef = useRef(null)
 
@@ -20,10 +21,18 @@ export default function Home() {
     if (audioRef.current) {
       audioRef.current.volume = 0.5
       audioRef.current.play().catch(() => {
-        console.log("Autoplay blocked — waiting for user interaction")
+        console.log("Autoplay blocked — showing play button")
+        setShowPlayButton(true)
       })
     }
   }, [])
+
+  const handlePlaySong = () => {
+    if (audioRef.current) {
+      audioRef.current.play()
+      setShowPlayButton(false)
+    }
+  }
 
   const screens = [
     <FirstScreen key="first" onNext={() => handleNext()} />,
@@ -51,14 +60,27 @@ export default function Home() {
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-pink-200 via-rose-100 to-purple-200">
 
       {/* Background Song */}
-      <audio ref={audioRef} src="/music/birthday.mp3" autoPlay loop />
+      <audio ref={audioRef} src="/music/birthday.mp3" loop />
+
+      {/* Play button if autoplay blocked */}
+      {showPlayButton && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          onClick={handlePlaySong}
+          className="fixed top-6 right-6 bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white px-5 py-3 rounded-full shadow-2xl z-50 font-bold text-sm"
+        >
+          ▶️ Let’s Play the Song
+        </motion.button>
+      )}
 
       {/* Song Note */}
       <motion.div
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="absolute top-4 w-full text-center z-50 text-sm text-pink-700 font-semibold"
+        className="absolute top-4 w-full text-center z-40 text-sm text-pink-700 font-semibold"
       >
         🎵 Song on special demand 💖
       </motion.div>
