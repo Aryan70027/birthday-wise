@@ -50,14 +50,13 @@ export default function HugOverlay({ show, onClose }) {
                   ease: "easeInOut",
                 }}
               >
-                {i % 2 === 0 ? <Heart size={12} fill="currentColor" /> : <Sparkles size={10} />}
+                {i % 2 === 0 ? <span className="text-2xl">🎂</span> : <span className="text-2xl">🎁</span>}
               </motion.div>
             ))}
 
             <motion.div
               className="mb-8 relative z-10 text-pink-500 flex justify-center"
               animate={{
-                // scale: [1, 1.2, 1],
                 filter: [
                   "drop-shadow(0 0 30px rgba(236, 72, 153, 0.6))",
                   "drop-shadow(0 0 50px rgba(236, 72, 153, 0.9))",
@@ -66,7 +65,6 @@ export default function HugOverlay({ show, onClose }) {
               }}
               transition={{ duration: 2.5, repeat: Number.POSITIVE_INFINITY }}
             >
-              {/* <Heart size={80} fill="currentColor" /> */}
               <img src="/gifs/hug.gif" className="w-40 md:w-52" alt="" />
             </motion.div>
 
@@ -76,7 +74,7 @@ export default function HugOverlay({ show, onClose }) {
               transition={{ delay: 1, duration: 1 }}
               className="text-3xl font-black bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent mb-6 relative z-10"
             >
-              Forever Hugs!
+              Happy Birthday, Ananya! 🎉
             </motion.h3>
 
             <motion.p
@@ -85,7 +83,7 @@ export default function HugOverlay({ show, onClose }) {
               transition={{ delay: 1.3, duration: 1 }}
               className="text-gray-700 text-xl mb-8 font-bold relative z-10 leading-relaxed flex flex-col items-center justify-center gap-2"
             >
-              I wish I could hug you forever… because I love you endlessly.
+              I wish I could make today as special as you are… because you truly deserve the best. 🎂✨
               <Heart size={20} fill="currentColor" className="text-pink-500" />
             </motion.p>
 
