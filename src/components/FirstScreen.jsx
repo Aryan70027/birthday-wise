@@ -89,7 +89,7 @@ export default function FirstScreen({ onNext }) {
                     transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY }}
                     style={{ backgroundSize: "200% 200%" }}
                 >
-                    I want to say something
+                    Happy Birthday, Ananya 🎉
                 </motion.h1>
                 <motion.p
                     className="text-2xl md:text-3xl font-bold text-gray-700 flex items-center justify-center gap-2"
@@ -102,7 +102,10 @@ export default function FirstScreen({ onNext }) {
                     }}
                     transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
                 >
-                    straight from my heart💖
+                    A day as special as you 🌸  
+Wishing you endless joy & love 💖
+                    👉 Your Birthday Surprise ❤️
+                    
                 </motion.p>
             </motion.div>
 
