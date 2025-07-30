@@ -50,7 +50,7 @@ export default function HugOverlay({ show, onClose }) {
                   ease: "easeInOut",
                 }}
               >
-                {i % 2 === 0 ? <span className="text-2xl">🎂</span> : <span className="text-2xl">🎁</span>}
+                {i % 2 === 0 ? <Heart size={12} fill="currentColor" /> : <Sparkles size={10} />}
               </motion.div>
             ))}
 
@@ -74,7 +74,7 @@ export default function HugOverlay({ show, onClose }) {
               transition={{ delay: 1, duration: 1 }}
               className="text-3xl font-black bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent mb-6 relative z-10"
             >
-              Happy Birthday, Ananya! 🎉
+              Another step in your amazing journey 👣 ✨ 🎂
             </motion.h3>
 
             <motion.p
@@ -83,7 +83,7 @@ export default function HugOverlay({ show, onClose }) {
               transition={{ delay: 1.3, duration: 1 }}
               className="text-gray-700 text-xl mb-8 font-bold relative z-10 leading-relaxed flex flex-col items-center justify-center gap-2"
             >
-              I wish I could make today as special as you are… because you truly deserve the best. 🎂✨
+              May your day be filled with joy, laughter, and endless smiles.  
               <Heart size={20} fill="currentColor" className="text-pink-500" />
             </motion.p>
 
