@@ -104,7 +104,7 @@ export default function FirstScreen({ onNext }) {
                 >
                     A day as special as you 🌸  
 Wishing you endless joy & love 💖
-                    👉 Your Birthday Surprise ❤️
+                    
                     
                 </motion.p>
             </motion.div>
@@ -121,7 +121,7 @@ Wishing you endless joy & love 💖
 
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
                 <span className="relative z-10 flex gap-2">
-                    Let me tell you
+                    👉 Your Birthday Surprise ❤️
                     <Heart size={20} fill="currentColor" className="mt-0.5" />
                 </span>
             </motion.button>
