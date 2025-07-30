@@ -65,7 +65,7 @@ export default function ThirdScreen({ onNext }) {
           transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
           style={{ backgroundSize: "200% 200%" }}
         >
-          Thank you for these beautiful memories
+          A Birthday Gallery Just for You 📸
         </motion.h2>
         <motion.div
           animate={{
