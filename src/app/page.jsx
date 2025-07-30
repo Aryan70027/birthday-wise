@@ -115,7 +115,7 @@ export default function Home() {
         }}
         className="fixed bottom-4 right-4 text-[13px] text-black/80 pointer-events-none z-40 font-light"
       >
-        @aryanmehta27
+        Made with ❤️ by 😏
       </motion.div>
     </div>
   )
