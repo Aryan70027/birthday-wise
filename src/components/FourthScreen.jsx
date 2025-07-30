@@ -9,17 +9,19 @@ export default function FourthScreen({ onShowOverlay }) {
   const [showButton, setShowButton] = useState(false)
   const scrollRef = useRef(null)
 
-  const specialMessage = `My dearest love,
+  const specialMessage = `Dear Ananya,
 
-Every day with you feels like a beautiful dream that I never want to wake up from. You've brought so much joy, laughter, and love into my life that I can't imagine a world without you in it.
+Happy Birthday! 🎉  
+Every year you keep getting more amazing, and I feel so lucky to call you my friend.  
+Your laughter makes even the dullest days bright, and your positivity inspires everyone around you.  
 
-Your smile lights up my darkest days, your laugh is my favorite melody, and your love is my greatest treasure. Thank you for being you - for being patient with me, for supporting my dreams, for making ordinary moments feel extraordinary.
+Thank you for always being there, for sharing countless smiles, and for filling every moment with joy.  
+On your special day, I just wish you endless happiness, success, and memories you’ll always cherish.  
 
-You are my best friend, my partner in crime, my safe haven, and my greatest adventure all rolled into one amazing person. I am so grateful that the universe brought us together.
+Stay the wonderful person you are — the world truly needs your sparkle! ✨
+  `
 
-I love you more than words can express, more than actions can show, and more than time can measure. You are my forever and always.`
-
-  const endingText = "There’s one last thing I wish could last forever…"
+  const endingText = "And now... a little birthday surprise for you 🎂"
 
   useEffect(() => {
     let index = 0
