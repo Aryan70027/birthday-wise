@@ -154,7 +154,7 @@ export default function SecondScreen({ onNext }) {
       >
         <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
         <span className="relative z-10 flex gap-2">
-          Keep going
+          A Wish Just for You 🌸
           <ArrowRight size={20} className="mt-0.5" />
         </span>
       </motion.button>
