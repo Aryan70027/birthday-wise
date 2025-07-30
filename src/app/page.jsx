@@ -20,7 +20,7 @@ export default function Home() {
     if (audioRef.current) {
       audioRef.current.volume = 0.5
       audioRef.current.play().catch(() => {
-        console.log("Autoplay blocked — user interaction required")
+        console.log("Autoplay blocked — waiting for user interaction")
       })
     }
   }, [])
@@ -53,7 +53,7 @@ export default function Home() {
       {/* Background Song */}
       <audio ref={audioRef} src="/music/birthday.mp3" autoPlay loop />
 
-      {/* Note message */}
+      {/* Song Note */}
       <motion.div
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -63,6 +63,7 @@ export default function Home() {
         🎵 Song on special demand 💖
       </motion.div>
 
+      {/* Screens */}
       <div className="relative z-10 min-h-screen">
         <AnimatePresence mode="wait">
           <motion.div
@@ -78,6 +79,7 @@ export default function Home() {
         </AnimatePresence>
       </div>
 
+      {/* Overlays */}
       <HugOverlay show={showHugOverlay} onClose={handleHugClose} />
       <RestartOverlay show={showRestartOverlay} onRestart={handleRestart} />
 
@@ -89,7 +91,8 @@ export default function Home() {
           duration: 1,
           delay: 1,
         }}
-        className="fixed bottom-4 right-4 text-[13px] text-black/80 pointer-events-none z-40 font-light">
+        className="fixed bottom-4 right-4 text-[13px] text-black/80 pointer-events-none z-40 font-light"
+      >
         @aryanmehta27
       </motion.div>
     </div>
