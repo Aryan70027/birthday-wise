@@ -2,10 +2,24 @@
 
 import { motion } from "motion/react"
 import { Heart, Sparkles } from "lucide-react"
+import { useEffect, useRef } from "react"
 
 export default function FirstScreen({ onNext }) {
+    const audioRef = useRef(null)
+
+    useEffect(() => {
+        if (audioRef.current) {
+            audioRef.current.play().catch(() => {
+                console.log("Autoplay blocked, user interaction needed")
+            })
+        }
+    }, [])
+
     return (
         <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center relative">
+
+            {/* Background Music */}
+            <audio ref={audioRef} src="/music/birthday.mp3" loop autoPlay />
 
             {/* Main heart container with premium effects */}
             <motion.div
@@ -92,7 +106,7 @@ export default function FirstScreen({ onNext }) {
                     Happy Birthday, Ananya 🎉
                 </motion.h1>
                 <motion.p
-                    className="text-2xl md:text-3xl font-bold text-gray-700 flex items-center justify-center gap-2"
+                    className="text-2xl md:text-3xl font-bold text-gray-700 flex flex-col items-center justify-center gap-2"
                     animate={{
                         textShadow: [
                             "0 0 20px rgba(236, 72, 153, 0.4)",
@@ -103,9 +117,10 @@ export default function FirstScreen({ onNext }) {
                     transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
                 >
                     A day as special as you 🌸  
-Wishing you endless joy & love 💖
-                    
-                    
+                    Wishing you endless joy & love 💖  
+                    <span className="text-pink-600 text-lg mt-3 italic">
+                        (Song on special demand 🎶)
+                    </span>
                 </motion.p>
             </motion.div>
 
@@ -118,7 +133,6 @@ Wishing you endless joy & love 💖
                 onClick={onNext}
                 className="relative px-10 py-4 bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white text-xl font-semibold rounded-full shadow-2xl overflow-hidden group border border-white/70"
             >
-
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
                 <span className="relative z-10 flex gap-2">
                     👉 Your Birthday Surprise ❤️
