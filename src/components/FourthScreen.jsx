@@ -9,17 +9,14 @@ export default function FourthScreen({ onShowOverlay }) {
   const [showButton, setShowButton] = useState(false)
   const scrollRef = useRef(null)
 
-  const specialMessage = `Dear Ananya,
+  const specialMessage = `Dear Kaustubh ,
+Happy Birthday 🎉
+Every year you somehow get better, and honestly… I’m really glad I get to know you a little more with time.
+Your smile has this habit of making normal days feel special, and being around you just feels easy and nice.
+Thanks for the laughs, the little moments, and for being you.
+On your birthday, I just wish you happiness, success, and lots of moments that make you smile the way you make others smile.
+Stay the same — there’s something genuinely special about you. ✨
 
-Happy Birthday! 🎉  
-Every year you keep getting more amazing, and I feel so lucky to call you my friend.  
-Your laughter makes even the dullest days bright, and your positivity inspires everyone around you.  
-
-Thank you for always being there, for sharing countless smiles, and for filling every moment with joy.  
-On your special day, I just wish you endless happiness, success, and memories you’ll always cherish.  
-
-Stay the wonderful person you are — the world truly needs your sparkle! ✨
-  `
 
   const endingText = "And now... a little birthday surprise for you 🎂"
 
