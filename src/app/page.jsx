@@ -59,31 +59,7 @@ export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-pink-200 via-rose-100 to-purple-200">
 
-      {/* Background Song */}
-      <audio ref={audioRef} src="/music/birthday.mp3" loop />
-
-      {/* Play button if autoplay blocked */}
-      {showPlayButton && (
-        <motion.button
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          onClick={handlePlaySong}
-          className="fixed top-6 right-6 bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white px-5 py-3 rounded-full shadow-2xl z-50 font-bold text-sm"
-        >
-          ▶️ Let’s Play the Song
-        </motion.button>
-      )}
-
-      {/* Song Note */}
-      <motion.div
-        initial={{ y: -30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="absolute top-4 w-full text-center z-40 text-sm text-pink-700 font-semibold"
-      >
-        🎵 Song on special demand 💖
-      </motion.div>
+      
 
       {/* Screens */}
       <div className="relative z-10 min-h-screen">
