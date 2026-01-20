@@ -103,7 +103,7 @@ export default function FirstScreen({ onNext }) {
                     transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY }}
                     style={{ backgroundSize: "200% 200%" }}
                 >
-                    Happy Birthday, Ananya 🎉
+                    Happy Birthday, Kaustubh  🎉
                 </motion.h1>
                 <motion.p
                     className="text-2xl md:text-3xl font-bold text-gray-700 flex flex-col items-center justify-center gap-2"
