@@ -10,7 +10,7 @@ import "swiper/css/effect-cards"
 export default function SecondScreen({ onNext }) {
   const thankYouCards = [
     {
-      text: "Happy Birthday, Ananya 🎂 — May your day be full of smiles!",
+      text: "Happy Birthday,  Kaustubh  🎂 — May your day be full of smiles!",
       icon: Heart,
       gradient: "from-pink-400 via-pink-500 to-fuchsia-500",
       glow: "shadow-pink-500/50",
