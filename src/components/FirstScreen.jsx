@@ -119,7 +119,7 @@ export default function FirstScreen({ onNext }) {
                     A day as special as you 🌸  
                     Wishing you endless joy & love 💖  
                     <span className="text-pink-600 text-lg mt-3 italic">
-                        (Song on special demand 🎶)
+                        
                     </span>
                 </motion.p>
             </motion.div>
